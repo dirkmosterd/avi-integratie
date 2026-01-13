@@ -1,3 +1,13 @@
+<?php
+  if (!isset($_GET['view'])) {
+    header('Location: index.php?view=visitor');
+    exit;
+  }
+?>
+
+<?php 
+  if ($_GET['view'] == 'visitor') {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,3 +62,9 @@
     </script>
   </body>
 </html>
+<?php } else { ?>
+  <p>You have escalated your priviledge, which is the E in STRIDE.</p>
+  <p>Find out more about A risk-level assessment system based on the STRIDE/DREAD model for
+digital data marketplaces, by accessing the infographic using the password: EscalatedView </p>
+<?php } ?>
+
