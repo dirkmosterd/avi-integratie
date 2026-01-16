@@ -6,7 +6,7 @@
 ?>
 
 <?php 
-  if ($_GET['view'] == 'visitor') {
+  if (($_GET['view'] == 'visitor') && (($_POST["name"] == '') || !(str_contains($_POST["name"], "1=1") || str_contains($_POST["name"], '""="'))))  {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,20 @@
 
     <button id="viewInfoOne" class="viewPdfButton" data-path="infographics/digital_marketplace.pdf" data-container="pdfContainerOne">View Infographic (Flag needed)</button>
     <div id="pdfContainerOne" class="pdfContainer" style="display: none"></div>
+
+    <h3>Urgency in Cybersecurity Risk Management: Toward a Solid Theory</h3>
+    <h5>Author: Zoltán Ádám Mann</h5>
+
+    <button id="viewInfoTwo" class="viewPdfButton" data-path="infographics/test.pdf" data-container="pdfContainerTwo">View Infographic (Flag needed)</button>
+    <div id="pdfContainerTwo" class="pdfContainer" style="display: none"></div><br>
+
+    <form method="post">
+        <h2>Tell us who visited!</h3> <br>
+        Name: <input type="text" name="name"><br>
+        <input type="submit">
+    </form>
+    <?php if ($_POST["name"]) {?>
+    <h3>Thanks for your visit <?php echo $_POST["name"]; }?></h3><br>
 
     <script>
         const pdfButtons = document.querySelectorAll('.viewPdfButton');
@@ -62,6 +76,9 @@
     </script>
   </body>
 </html>
+<?php } else if (str_contains($_POST["name"], "1=1") || str_contains($_POST["name"], '""="')) { ?>
+  <p>You tried to gain access to data from the database via SQL injection, which is a relatively easy exploit to perform, while causing major damage.</p>
+  <p>Learn more about the urgency of attacks by accessing the infographic. The password is: UrgencyMatters</p>
 <?php } else { ?>
   <p>You have escalated your priviledge, which is the E in STRIDE.</p>
   <p>Find out more about A risk-level assessment system based on the STRIDE/DREAD model for

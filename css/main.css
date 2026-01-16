@@ -85,7 +85,8 @@ p {
     max-width: 800px;
 }
 
-button {
+button,
+input[type="submit"] {
     background-color: var(--primary-color);
     color: var(--accent-color);
     border: none;
@@ -96,7 +97,18 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+input {
+    color: var(--secondary-color);
+    border: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
     background-color: var(--secondary-color);
     color: var(--accent-color);
 }

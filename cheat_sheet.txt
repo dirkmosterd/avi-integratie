@@ -1,6 +1,13 @@
 Alleen te gebruiken wanneer je echt vastloopt!
 
+Website valt lokaal te hosten met VS-code extentie:
+    - https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver
+
 A risk-level assessment system based on the STRIDE/DREAD model for
 digital data marketplaces:
     Wachtwoord te vinden door index.php?view=user te vervangen door index.php?view=admin
     Wachtwoord is: EscalatedView
+
+Urgency in Cybersecurity Risk Management: Toward a Solid Theory:
+    Wachtwoord is te vinden door een SQL injectie uit te voeren (" or ""=")
+    Wachtwoord is: UrgencyMatters
