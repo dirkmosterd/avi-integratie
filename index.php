@@ -33,7 +33,7 @@
     <h3>Urgency in Cybersecurity Risk Management: Toward a Solid Theory</h3>
     <h5>Author: Zoltán Ádám Mann</h5>
 
-    <button id="viewInfoTwo" class="viewPdfButton" data-path="infographics/test.pdf" data-container="pdfContainerTwo">View Infographic (Flag needed)</button>
+    <button id="viewInfoTwo" class="viewPdfButton" data-path="infographics/real_time_cybersec.pdf" data-container="pdfContainerTwo">View Infographic (Flag needed)</button>
     <div id="pdfContainerTwo" class="pdfContainer" style="display: none"></div><br>
 
     <form method="post">
