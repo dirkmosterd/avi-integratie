@@ -1,0 +1,6 @@
+Alleen te gebruiken wanneer je echt vastloopt!
+
+A risk-level assessment system based on the STRIDE/DREAD model for
+digital data marketplaces:
+    Wachtwoord te vinden door index.php?view=user te vervangen door index.php?view=admin
+    Wachtwoord is: EscalatedView
