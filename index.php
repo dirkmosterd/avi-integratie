@@ -27,7 +27,7 @@
     <h3>A risk-level assessment system based on the STRIDE/DREAD model for digital data marketplaces</h3>
     <h5>Authors: Lu Zhang, Arie Taal, Reginal Cushing, Cees de Laat and Paola Grosso</h5>
 
-    <button id="viewInfoOne" class="viewPdfButton" data-path="infographics/test.pdf" data-container="pdfContainerOne">View Infographic (Flag needed)</button>
+    <button id="viewInfoOne" class="viewPdfButton" data-path="infographics/digital_marketplace.pdf" data-container="pdfContainerOne">View Infographic (Flag needed)</button>
     <div id="pdfContainerOne" class="pdfContainer" style="display: none"></div>
 
     <script>

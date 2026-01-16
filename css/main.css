@@ -2,6 +2,7 @@
     --primary-color: #1abc9c;
     --secondary-color: #2c3e50;
     --accent-color: #ecf0f1;
+    --background-color: #dfe6e9;
 }
 
 * {
@@ -12,34 +13,71 @@
 }
 
 body {
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     color: var(--secondary-color);
     line-height: 1.6;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: var(--background-color);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(900px, 100%);
+    height: calc(100% - 80px);
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rbga(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+body > * {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
 }
 
 h1 {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 h2 {
     color: var(--secondary-color);
     margin-top: 30px;
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 h3 {
     color: var(--primary-color);
     margin-top: 20px;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 h5 {
     color: var(--secondary-color);
     font-weight: normal;
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 p {
@@ -51,6 +89,7 @@ button {
     background-color: var(--primary-color);
     color: var(--accent-color);
     border: none;
+    display: block;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
@@ -63,7 +102,7 @@ button:hover {
 }
 
 .pdfContainer {
-    margin-top: 20px;
+    margin: 30px auto;
     width: 100%;
     max-width: 800px;
     height: 600px;
@@ -71,6 +110,7 @@ button:hover {
     border-radius: 5px;
     overflow: hidden;
     background-color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .pdfContainer iframe {
